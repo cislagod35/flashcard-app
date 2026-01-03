@@ -98,7 +98,7 @@ export default function FlashcardApp() {
     };
 
     const deleteTopic = (topicName) => {
-        if (!confirm(`¿Eliminar el tema "${topicName}" y todas sus tarjetas?`)) return;
+        if (!window.confirm(`¿Eliminar el tema "${topicName}" y todas sus tarjetas?`)) return;
 
         const updatedTopics = { ...topics };
         delete updatedTopics[topicName];
@@ -288,7 +288,7 @@ export default function FlashcardApp() {
                     return;
                 }
 
-                const shouldMerge = confirm('¿Deseas combinar con tus tarjetas existentes?\n\nOK = Combinar\nCancelar = Reemplazar todo');
+                const shouldMerge = window.confirm('¿Deseas combinar con tus tarjetas existentes?\n\nOK = Combinar\nCancelar = Reemplazar todo');
 
                 let finalTopics, finalStats;
                 if (shouldMerge) {
@@ -650,9 +650,9 @@ export default function FlashcardApp() {
                                     <div
                                         key={idx}
                                         className={`p-4 rounded-lg border-l-4 ${rec.priority >= 8 ? 'border-red-500 bg-red-50' :
-                                                rec.priority >= 6 ? 'border-orange-500 bg-orange-50' :
-                                                    rec.priority >= 4 ? 'border-yellow-500 bg-yellow-50' :
-                                                        'border-green-500 bg-green-50'
+                                            rec.priority >= 6 ? 'border-orange-500 bg-orange-50' :
+                                                rec.priority >= 4 ? 'border-yellow-500 bg-yellow-50' :
+                                                    'border-green-500 bg-green-50'
                                             }`}
                                     >
                                         <div className="flex justify-between items-start">
@@ -667,9 +667,9 @@ export default function FlashcardApp() {
                                             </div>
                                             <div className="text-right">
                                                 <div className={`text-2xl font-bold ${rec.priority >= 8 ? 'text-red-600' :
-                                                        rec.priority >= 6 ? 'text-orange-600' :
-                                                            rec.priority >= 4 ? 'text-yellow-600' :
-                                                                'text-green-600'
+                                                    rec.priority >= 6 ? 'text-orange-600' :
+                                                        rec.priority >= 4 ? 'text-yellow-600' :
+                                                            'text-green-600'
                                                     }`}>
                                                     {rec.stats.total > 0 ? `${rec.stats.percentage}%` : 'Nuevo'}
                                                 </div>
@@ -853,8 +853,8 @@ export default function FlashcardApp() {
                                         <div
                                             key={topic}
                                             className={`p-3 rounded-lg cursor-pointer transition ${currentTopic === topic
-                                                    ? 'bg-purple-500 text-white'
-                                                    : 'bg-white hover:bg-gray-100'
+                                                ? 'bg-purple-500 text-white'
+                                                : 'bg-white hover:bg-gray-100'
                                                 }`}
                                         >
                                             <div className="flex justify-between items-center">
@@ -914,8 +914,8 @@ export default function FlashcardApp() {
                                                 <button
                                                     onClick={() => setAddMode('single')}
                                                     className={`flex-1 px-4 py-2 rounded-lg font-medium transition ${addMode === 'single'
-                                                            ? 'bg-blue-500 text-white'
-                                                            : 'bg-white text-gray-700 hover:bg-gray-100'
+                                                        ? 'bg-blue-500 text-white'
+                                                        : 'bg-white text-gray-700 hover:bg-gray-100'
                                                         }`}
                                                 >
                                                     Una tarjeta
@@ -923,8 +923,8 @@ export default function FlashcardApp() {
                                                 <button
                                                     onClick={() => setAddMode('bulk')}
                                                     className={`flex-1 px-4 py-2 rounded-lg font-medium transition ${addMode === 'bulk'
-                                                            ? 'bg-blue-500 text-white'
-                                                            : 'bg-white text-gray-700 hover:bg-gray-100'
+                                                        ? 'bg-blue-500 text-white'
+                                                        : 'bg-white text-gray-700 hover:bg-gray-100'
                                                         }`}
                                                 >
                                                     Varias tarjetas
