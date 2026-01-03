@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Plus, Book, Trash2, Edit2, Eye, EyeOff, ChevronLeft, ChevronRight, Save, X, Download, Upload, BarChart3, Clock, TrendingUp, Brain } from 'lucide-react';
+import { Plus, Book, Trash2, Edit2, Eye, ChevronLeft, ChevronRight, Save, X, Download, Upload, BarChart3, Clock, TrendingUp, Brain } from 'lucide-react';
 
 export default function FlashcardApp() {
     const [topics, setTopics] = useState({});
